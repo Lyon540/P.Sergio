@@ -1,0 +1,38 @@
+Luis Manuel Guerrero Contreras
+Tel:  811-411-4916
+e-mail: lmgc183@gmail.com
+Usuario Github: Lyon540
+Ubicacion: Monterrey, Nuevo Leon, Mexico
+
+Create database employee_employee
+Use employee_employee
+
+Create table employee(
+Id			int,
+first_name  Varchar(50),
+last_name	varchar(80)
+)
+
+Insert into employee values(1,'Luis','Guerrero')
+Insert into employee values(2,'Tania','Gutierrez')
+Insert into employee values(3,'Rocio','Solis')
+Insert into employee values(4,'Guadalupe','Puente')
+
+Create table employee_department(
+Id			Int,
+name		Varchar(50),
+Descripcion Varchar(50)
+)
+
+Insert into employee_department values(1,'Finanzas','Controla la sitacion financiera de la empresa')
+Insert into employee_department values(2,'Ventas','Se lleva control de los productos vendidos ')
+Insert into employee_department values(3,'Produccion', 'Se producen los articulos a vender')
+Insert into employee_department values(4,'Soporte','Da ayuda a equipos de computo en general')
+Insert into employee_department values(5,'Sistemas','Atiende reportes y soluciona problemas')
+Insert into employee_department values(6,'Desarrollo','Realiza modificaciones al programa')
+
+Select employee.Id, employee.first_name, employee.last_name,employee_department.name from employee
+inner join employee_department
+On employee.Id = employee_department.Id
+
+
